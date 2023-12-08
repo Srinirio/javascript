@@ -1,0 +1,176 @@
+-----------------------JAVASCRIPT----------------
+console.log is used for debugging
+alert();
+
+----------------VARIABLES--------
+DYNAMIC TYPE LANGUAGE
+
+EX:
+
+let a =10;
+a="aa";
+
+--variable declaration 
+ let ---latest 
+ const -----is fixed value can not change
+ var -------old version
+
+TO contect html and js
+
+<script scr="script.js"></script>
+
+----------operators--------
+
+arithmatic op: + - * / % ++ -- (** to find square  a=10; a**2 = 100)
+assignment op: = = += -= /= %=
+comparisin op: == === != > < >= <= ?
+logical op: && || !
+
+typeof 'a';
+string
+
+-----DIFFERENT BETWEEN = AND == ----
+
+Double == is check the value
+Ex
+ let a=10;
+ a='10';
+ a==10 ; //true
+
+ a===10; // false here === is check the data type als0
+
+-------------USER INPUT------------
+
+let name= prompt("Enter your name:"); if ypu use this you get string value only.
+ so use Number(name);
+
+--------------------DOM--------------
+
+<div id="wrapper">
+        <h2>cm to inches</h2>
+        <div class="inputdiv">
+            <input type="text" id="input" placeholder="length in cm">
+        </div>
+        <div>
+            <button type="submit" onclick="convert()">Convert to inches</button>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+
+    <script>
+        function convert(){
+            let input = Number(document.getElementById("input").value);
+        let inches = input/2.54;
+        let btn = document.getElementById("result");
+        btn.innerHTML = inches.tofixed(3);
+        }
+    </script>
+
+
+
+----------------------MATH Functions-------------
+
+ Math.round(); 5.8-6
+ Math.floor(); 5 ingore 2nd num
+ Math.ceil(); 6 next num
+ Math.sqrt(55);
+ MAth.abs(-9) - to +
+ Math.pow(3,5) ;
+ Math.min();
+
+-------------STRING------------
+
+let str = "hello world";
+let str1 = "javascript"
+
+str.concat(str1);
+str.slice(1,2)- 1-st position 2- end posision--(e)
+str.slice(-5) in reverse order
+srt.substring(1,2) (e)
+str.substr(1,2); el
+str.replace("e","0"); h0llo
+str.replaceAll();
+str.toUpperCase();
+str.length
+str.trim()
+str.padEnd(10,'0');
+'hello00000'
+str.padStart(10,'0');
+'00000hello'
+str.indexOf('h')
+0
+str.lastIndexOf('h')
+0
+str.search('hello')
+11
+str.includes('h')
+true
+str.includes('hikm')
+false
+str.charAt();
+
+-------------Math.floor(Math.random(name.length)*name.length)---TO FIND RANDOM CHAR AT STRING--
+
+-----------TEMPLATE LITERALS---------
+
+let mes = `${name} ${class} is here`
+
+let a = 5;
+undefined
+let b = 95;
+undefined
+let mes =`"you have ${a} items in your cart."`
+undefined
+mes =`"you have ${a} items in your cart."`
+'"you have 5 items in your cart."'
+mes =`"you have ${a} items in your cart."\n your bill amount is $${b}`
+'"you have 5 items in your cart."\n your bill amount is $95'
+
+----------------------ARRAYS------------
+
+let array = [1,2,3,4,5,6];
+
+ADD
+
+array.push(8);
+array.pop();
+
+array.shift()--remove 1st element
+
+array.unshift(10)--add element in 1st position
+array=[1,2,3,4,5]
+array.splice(2,1)---it delete the 3-[1,2,4,5]
+
+array.reverse();
+
+/////////array to string
+
+let a = array.join();
+
+////////string to array
+
+let s= a,s,d;
+let a = s.split(,);
+a=[a,s,d]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: antiquewhite;
+        }
+
+        .inner-box {
+            width: 480px;
+            background-color: rgb(6, 3, 61);
+            height: 600px;
+            margin: 100px auto;
+            text-align: center;
+            padding: 50px 0px;
+            border-radius: 20px;
+        }
+
+        textarea {
+            width: 400px;
+            height: 300px;
+            resize: none;
+            /* Set to "none" to disable resizing */
+            padding: 10px;
+            /* Optional: add padding for better visual appearance */
+            margin: 30px 0px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: antiquewhite;
+            font-size: 1rem;
+        }
+        #show{
+     color:white;
+     margin-top:20px;
+     font-size:32px;
+ }
+    </style>
+</head>
+<body>
+    <div class="outer-box">
+        <div class="inner-box">
+            <div class="innermost-box">
+                <h2 style="color: antiquewhite;">Type a sentence</h2>
+                <textarea id="test" name="w3review" rows="4" cols="50"></textarea>
+                <div class="btn">
+                    <button onclick="countWords()">Calculate words</button>
+                </div>
+                <div id="show"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function countWords() {
+            let text = document.getElementById("test").value;
+            console.log(text);
+            text = text.split(" ");
+            let l = text.length
+            console.log(text.length);
+            let show = document.getElementById("show");
+            show.innerHTML = l + "words";
+            
+        }
+    </script>
+</body>
+</html>
