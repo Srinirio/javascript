@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+body{
+   margin: 0;
+   font-family: 'Poppins', sans-serif;
+   background-color:#f5e8ba;
+}
+
+#wrapper div,#wrapper h2{
+    display:flex;
+    justify-content: center;
+    
+}
+
+select{
+    border-radius: 5px;
+    border: 2px solid black ;
+    margin-top:30px;
+    height:2.5em;
+    width:250px;
+    padding-left:10px;
+    
+}
+option{
+    color: black;
+}
+
+h2{
+    color:#ffeba7;
+    letter-spacing: 1px;
+}
+input{
+    border-radius: 5px;
+    border: 2px solid black ;
+    margin-top:30px;
+    height:2em;
+    width:250px;
+    padding-left:10px;
+}
+
+input:active{
+    border:none;
+}
+#wrapper{
+    height:500px;
+    width:400px;
+    margin:200px auto;
+    background-color:#1f2029;
+    border-radius:10px;
+    padding:30px;
+}
+
+button{
+    margin-top:20px;
+    background-color:#ffeba7;
+    border-radius: 4px;
+    height: 44px;
+    font-weight: 600;
+    padding: 0 30px;
+    letter-spacing: 1px;
+    border: none;
+    background-color: #ffeba7;
+    color: #102770;
+}
+
+button:hover{
+    cursor:pointer;
+}
+#result{
+    color:white;
+    margin-top:20px;
+    font-size:32px;
+}
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>cm to inches</h2>
+        <div class="inputdiv">
+            <select name="country" id="input">
+                <option value="Bangalore">Bangalore</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="mumbai">mumbai</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Convert to inches</button>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+
+    <script>
+       let btn=document.querySelector('button');
+       btn.addEventListener('click',show);
+       function show(){
+        let ele = document.getElementById('input');
+        const option = ele.options[ele.selectedIndex].value;
+        let pos =0, le=0 , lan="";
+        switch(option){
+            case 'Bangalore':
+                pos=1;
+                le:1;
+                lan="tamil";
+                break
+
+                case 'Chennai':
+                pos=2;
+                le:2;
+                lan="tamil";
+                break
+
+                case 'mumbai':
+                pos=3;
+                le:3;
+                lan="tamil";
+                break
+        }
+        
+        let spe_div = document.createElement('h1');
+        spe_div.id = 'result';
+        document.getElementById("wrapper").appendChild(spe_div);
+        document.getElementById('result').innerHTML = `${option}`;
+       }
+
+    </script>
+    
+</body>
+</html>

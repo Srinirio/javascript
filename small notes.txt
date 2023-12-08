@@ -152,15 +152,169 @@ let a = array.join();
 ////////string to array
 
 let s= a,s,d;
-let a = s.split(,);
+let a = s.split(",");
 a=[a,s,d]
+-----------------------
+------------------event-listener------------
+</head>
+<body>
+    <div id="wrapper">
+        <h2>cm to inches</h2>
+        <div class="inputdiv">
+            <select name="country" id="input">
+                <option value="Bangalore">Bangalore</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="mumbai">mumbai</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Convert to inches</button>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+
+    <script>
+       let btn=document.querySelector('button');
+       btn.addEventListener('click',show);
+       function show(){
+        let ele = document.getElementById('input');
+        const option = ele.options[ele.selectedIndex].value;
+        let pos =0, le=0 , lan="";
+        switch(option){
+            case 'Bangalore':
+                pos=1;
+                le:1;
+                lan="tamil";
+                break
+
+                case 'Chennai':
+                pos=2;
+                le:2;
+                lan="tamil";
+                break
+
+                case 'mumbai':
+                pos=3;
+                le:3;
+                lan="tamil";
+                break
+        }
+        
+        let spe_div = document.createElement('div');
+        spe_div.id = 'result';
+        document.getElementById("wrapper").appendChild(spe_div);
+        document.getElementById('result').innerHTML = `${option}`;
+       }
+
+    </script>
+
+----------------------
+<body>
+    <div class="dropDown">
+        <input type="text" id="element" placeholder="Enter the dept"><br>
+
+        <div id="btn">
+            <button>Add</button>
+        </div>
+        <select name="dept" id="dept">
+            <option value="cse">cse</option>
+            <option value="ece">ece</option>
+        </select>
+    </div>
+
+
+     <script>
+        let button = document.querySelector('button');
+        button.addEventListener('click', show);
+
+        function show() {
+            let input = document.getElementById("element").value;
+            let ele = document.createElement('option');
+            ele.id='dept';
+            document.getElementById('dept').appendChild(ele);
+            ele.innerHTML = input; 
+        }
+    </script>
+---------------------
+
+--------------------
+
+<body>
+     <div class="heading">
+        <h2>Color flip</h2>
+        <div numOfCol>
+            <h2 id="color">#FFFFF</h2>
+        </div>
+     </div>
+
+     <div class="btn" id="btn">
+        <button>Change Color</button>
+     </div>
+
+    <script src="script.js"></script>
+</body>
 
 
 
+let btn = document.querySelector('button');
+let color = document.getElementById('color');
+let back = document.getElementById('btn');
+let hex = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
+
+btn.addEventListener('click',changeColor);
+
+function changeColor(){
+    let col = "#";
+   
+    for(let i=1;i<=6;i++){
+        
+        col = col+getValu();
+    }
+    console.log(col)
+
+    color.innerHTML = col;
+    back.style.backgroundColor=col;
+}
+
+function getValu(){
+    let num =Math.floor(Math.random()*16);
+    
+    return hex[num];
+}
+-------------------
+
+---------------------OBJECT-----------
+
+ways to create object
+1} let item = { 
+name = "phone";
+price= 2070;
+model="k20";
+}
+
+2} let item2= new Object();
+item2.name="remi";
+item2.price=200;
+item2.model= "note pro";
+
+----------------HOISTING-------FUNCTIONS-----
+
+sayHello(); // "Hello, World!"
+
+function sayHello() {
+    console.log("Hello, World!");
+}
+The entire function declaration is hoisted to the top, so you can call the function even before its declaration in the code.
 
 
-
-
+--REST PARAMENTERS--
+LET SUM = FUNCTION(...ARGS){
+  
+}
+---------------CALLBACKS-----------
 
 
 

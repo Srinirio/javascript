@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        select{
+    border-radius: 5px;
+    border: 2px solid black ;
+    margin-top:30px;
+    height:2.5em;
+    width:250px;
+    padding-left:10px;
+    
+}
+option{
+    color: black;
+}
+
+.dropDown{
+    text-align: center;
+    margin: 200px auto;
+    height: 300px;
+    width: 300px;
+    background-color: aquamarine;
+    padding: 20px;
+}
+input{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+button{
+    margin-top: 10px;
+    padding: 10px;
+    width: 100px;
+    background-color: crimson;
+    color: wheat;
+    font-weight: 900;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="dropDown">
+        <input type="text" id="element" placeholder="Enter the dept"><br>
+
+        <div id="btn">
+            <button>Add</button>
+        </div>
+        <select name="dept" id="dept">
+            <option value="cse">cse</option>
+            <option value="ece">ece</option>
+        </select>
+    </div>
+
+
+     <script>
+        let button = document.querySelector('button');
+        button.addEventListener('click', show);
+
+        function show() {
+            let input = document.getElementById("element").value;
+            let ele = document.createElement('option');
+            ele.id='dept';
+            document.getElementById('dept').appendChild(ele);
+            ele.innerHTML = input; 
+        }
+    </script>
+
+</body>
+</html>
