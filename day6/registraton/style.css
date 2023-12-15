@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,300&display=swap');
+:root{
+    --white:white;
+    --green:rgb(13, 169, 28);
+    --red:red
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background: rgb(45,164,117);
+    background: linear-gradient(90deg, rgba(45,164,117,1) 32%, rgba(60,143,53,1) 100%);
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    margin: 0px;
+}
+
+#form{
+    width: 400px;
+    margin: 20vh auto 0 auto;
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.heading{
+    text-align: center;
+    color: var(--green);
+    margin-bottom: 20px;
+}
+
+button{
+    background-color: var(--green);
+    padding: 5px;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 100%;
+    color: var(--white);
+    border: 1px solid var(--green);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.reg-from{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.reg-from input{
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--green);
+}
+
+.reg-from input:focus{
+    outline: none;
+}
+
+.reg-from .error{
+    color: var(--red);
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.reg-from.error input{
+    border-color: var(--red);
+}
+
+.reg-from.success input{
+    border-color: var(--green);
+}

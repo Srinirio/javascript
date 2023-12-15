@@ -15,7 +15,7 @@ a="aa";
  const -----is fixed value can not change
  var -------old version
 
-TO contect html and js
+TO connect html and js
 
 <script scr="script.js"></script>
 
@@ -41,7 +41,7 @@ Ex
 
 -------------USER INPUT------------
 
-let name= prompt("Enter your name:"); if ypu use this you get string value only.
+let name= prompt("Enter your name:"); if you use this you get string value only.
  so use Number(name);
 
 --------------------DOM--------------
@@ -178,6 +178,7 @@ a=[a,s,d]
 
     <script>
        let btn=document.querySelector('button');
+//////////////here the event
        btn.addEventListener('click',show);
        function show(){
         let ele = document.getElementById('input');
@@ -314,8 +315,72 @@ The entire function declaration is hoisted to the top, so you can call the funct
 LET SUM = FUNCTION(...ARGS){
   
 }
----------------CALLBACKS-----------
+---------------Hoisting-----------
+hoisting is a JavaScript behavior where declarations (but not initializations) of variables and 
+entire function bodies are moved to the top of their containing scope during the compilation phase.
 
+------------------Modules------------
+JavaScript modules allow you to break up your code into separate files.
+
+This makes it easier to maintain a code-base.
+
+Modules are imported from external files with the import statement.
+
+Modules also rely on type="module" in the <script> tag.
+
+-------------CALLBACKS--------------
+In JavaScript, a callback is a function that is passed as an argument to another 
+function and is intended to be executed after the completion of 
+some asynchronous operation or at a later time. Callbacks are a fundamental concept in asynchronous 
+programming and are commonly used to handle tasks such as responding to user actions, making 
+network requests, or reading files.
+
+---------------------PROMISES----------------
+
+
+PROMISES IS AN OBJECT IN JS MOSTLY IT IS USED FOR ASYNCHRONOUS OPRATIONS
+
+A Promise can be in one of three states:
+
+Pending: The initial state; the promise is neither fulfilled nor rejected.
+
+Fulfilled: The operation completed successfully, and the promise has a resulting value.
+
+Rejected: The operation failed, and the promise has a reason for the failure.
+
+Here's a basic example of using a Promise:
+
+const myPromise = new Promise((resolve, reject) => {
+  // Simulating an asynchronous operation
+  setTimeout(() => {
+    const success = true;
+
+    if (success) {
+      resolve("Operation succeeded!");
+    } else {
+      reject("Operation failed!");
+    }
+  }, 2000); // Simulating a delay of 2 seconds
+});
+
+// Using the promise
+myPromise
+  .then((result) => {
+    console.log(result); // Output: Operation succeeded!
+  })
+  .catch((error) => {
+    console.error(error); // Output: Operation failed!
+  });
+
+
+------------------------ASYNC/AWAIT--------------
+"async and await make promises easier to write"
+
+async makes a function return a Promise
+
+await makes a function wait for a Promise
+
+------------------
 
 
 

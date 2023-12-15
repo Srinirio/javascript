@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(a);
+        var a=10;
+        console.log(a);
+        const myPromise = new Promise((resolve, reject) => {
+  // Simulating an asynchronous operation
+  setTimeout(() => {
+    const success = true;
+
+    if (success) {
+      resolve("Operation succeeded!");
+    } else {
+      reject("Operation failed!");
+    }
+  }, 2000); // Simulating a delay of 2 seconds
+});
+
+// Using the promise
+myPromise
+  .then((result) => {
+    console.log(result); // Output: Operation succeeded!
+  })
+  .catch((error) => {
+    console.error(error); // Output: Operation failed!
+  });
+
+    </script>
+</body>
+</html>
